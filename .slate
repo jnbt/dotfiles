@@ -1,0 +1,68 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+# lot of stuff found in http://thume.ca/howto/2012/11/19/using-slate/
+
+# Tools
+alias browser     'Safari'
+alias dev-browser 'Google Chrome'
+alias editor      'Sublime Text 2'
+alias terminal    'iTerm'
+
+# Config
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+config layoutFocusOnActivate true
+
+
+# Abstract positions
+alias full        move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf    move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf   move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft     corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright    corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft  corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias tophalf     move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf  move screenOriginX;screenSizeY/2 screenSizeX;screenSizeY/2
+
+# Move windows with arrow keys
+bind right:alt;cmd  ${righthalf}
+bind left:alt;cmd   ${lefthalf} 
+bind up:alt;cmd     ${tophalf}
+bind down:alt;cmd   ${bottomhalf}
+bind .:alt;cmd      ${full}
+
+# Move windows with numpad
+bind pad1 ${bottomleft}
+bind pad2 ${bottomhalf}
+bind pad3 ${bottomright}
+bind pad4 ${lefthalf}
+bind pad5 ${full}
+bind pad6 ${righthalf}
+bind pad7 ${topleft}
+bind pad8 ${tophalf}
+bind pad9 ${topright}
+
+# Push windows to 1/3
+bind right:alt;ctrl;cmd  push right bar-resize:screenSizeX/3
+bind left:alt;ctrl;cmd   push left  bar-resize:screenSizeX/3
+bind up:alt;ctrl;cmd     push up    bar-resize:screenSizeY/3
+bind down:alt;ctrl;cmd   push down  bar-resize:screenSizeY/3
+
+# Window Hints
+bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
+
+# Focus default browser
+bind b:cmd;alt focus ${browser}
+bind t:cmd;alt focus ${terminal}
+
+# 1monitor: Development
+layout 1monitor ${dev-browser}: push left  bar-resize:screenSizeX/2
+layout 1monitor ${terminal}:    move screenOriginX+screenSizeX/2;screenOriginY+4*screenSizeY/5 screenSizeX/2;1*screenSizeY/5
+layout 1monitor ${editor}:      move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;4*screenSizeY/5
+bind pad1:cmd layout 1monitor 
+
