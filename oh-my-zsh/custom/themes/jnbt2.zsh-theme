@@ -7,7 +7,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$grey%})"
 
 function jnbt_prompt {
   (( spare_width = ${COLUMNS} ))
-  prompt=" "
+  prompt="%n@%m"
 
   branch=$(current_branch)
   ruby_version=$(rvm_prompt_info || rbenv_prompt_info)
@@ -15,7 +15,7 @@ function jnbt_prompt {
   branch_size=${#branch}
   ruby_size=${#ruby_version}
   user_machine_size=${#${(%):-%n@%m-}}
-  
+
   if [[ ${#branch} -eq 0 ]]
     then (( ruby_size = ruby_size + 1 ))
   else
@@ -24,20 +24,21 @@ function jnbt_prompt {
       (( branch_size = branch_size + 2 ))
     fi
   fi
-  
+
   (( spare_width = ${spare_width} - (${user_machine_size} + ${path_size} + ${branch_size} + ${ruby_size}) ))
 
   while [ ${#prompt} -lt $spare_width ]; do
     prompt=" $prompt"
   done
-  
-  prompt="%{%F{green}%}$PWD$prompt%{%F{red}%}$(rvm_prompt_info || rbenv_prompt_info)%{$reset_color%} $(git_prompt_info)"
-  
+
+  prompt="%{%F{green}%}$PWD$prompt%{%F{red}%}$(rvm_prompt_info || rbenv_prompt_info)%{$reset_color%} $(git_prompt_info)%{$reset_color%}"
+
   echo $prompt
 }
 
-setopt prompt_subst
-
-PROMPT='
-%n@%m $(jnbt_prompt)
-%(?,%{%F{green}%},%{%F{red}%})⚡%{$reset_color%} '
+status() {
+  print ""
+  print -rP "$(jnbt_prompt)"
+}
+add-zsh-hook precmd status
+export PROMPT="⚡  "
