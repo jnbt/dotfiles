@@ -17,7 +17,7 @@ config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 config layoutFocusOnActivate true
 
-
+# 
 # Abstract positions
 alias full        move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf    move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
@@ -47,6 +47,10 @@ bind pad7:cmd ${topleft}
 bind pad8:cmd ${tophalf}
 bind pad9:cmd ${topright}
 
+# Move across screens
+bind pad1:cmd;ctrl 	     throw 0 resize
+bind pad2:cmd;ctrl 	     throw 1 resize
+
 # Push windows to 1/3
 bind right:alt;ctrl;cmd  push right bar-resize:screenSizeX/3
 bind left:alt;ctrl;cmd   push left  bar-resize:screenSizeX/3
@@ -64,5 +68,5 @@ bind t:cmd;alt focus ${terminal}
 layout 1monitor ${dev-browser}: push left  bar-resize:screenSizeX/2
 layout 1monitor ${terminal}:    move screenOriginX+screenSizeX/2;screenOriginY+4*screenSizeY/5 screenSizeX/2;1*screenSizeY/5
 layout 1monitor ${editor}:      move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;4*screenSizeY/5
-bind pad1:cmd layout 1monitor
+bind f1:cmd layout 1monitor
 
