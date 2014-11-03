@@ -1,5 +1,5 @@
-vhosts(){ mate /etc/apache2/extra/httpd-vhosts.conf; }
-hosts(){ mate /etc/hosts; }
+vhosts(){ subl /usr/local/etc/nginx; }
+hosts(){ subl /etc/hosts; }
 
 c(){ cd ~/Inwork/$1; }
 _c(){ _files -W ~/Inwork -/; }
