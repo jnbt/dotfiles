@@ -1,5 +1,5 @@
-vhosts(){ subl /usr/local/etc/nginx; }
-hosts(){ subl /etc/hosts; }
+vhosts(){ "${EDITOR:-vi}" /usr/local/etc/nginx; }
+hosts(){ "${EDITOR:-vi}" /etc/hosts; }
 
 c(){ cd ~/Inwork/$1; }
 _c(){ _files -W ~/Inwork -/; }
