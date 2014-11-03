@@ -1,11 +1,8 @@
-neogit() {
-  git config user.name "Jonas Thiel"
-  git config user.email "jt@neopoly.de"
-  echo -n "Name: "
-  git config user.name
-  echo -n "E-Mail: "
-  git config user.email
-}
+# Exports
+export SF_DIR="$HOME/devel/smartfox"
+
+# Aliases
+alias md5sum='md5 -r'
 
 neo(){ cd ~/devel/$1; }
 _neo(){ _files -W ~/devel -/; }
