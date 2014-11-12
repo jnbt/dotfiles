@@ -1,0 +1,11 @@
+startup_message off
+
+#deflogin on
+defnonblock 5
+defscrollback 4096
+
+vbell on
+vbell_msg "   Hello Dave!"
+
+hardstatus alwayslastline
+hardstatus string '%{=b kg}%{G} %H%{g} %{= kw}%?%-Lw%?%{=b kR}%{W}%n:%t%?(%u)%?%{=b kR}%{= kw}%?%+Lw%?%?%= %{=b y}{ %l }%{g} %{=b C}%c%{g} '
