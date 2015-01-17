@@ -46,3 +46,12 @@ ssh() {
       tmux rename-window "$old_name"
   fi
 }
+
+jnbtgit() {
+  git config user.name "Jonas Thiel"
+  git config user.email "jonas@thiel.io"
+  echo -n "Name: "
+  git config user.name
+  echo -n "E-Mail: "
+  git config user.email
+}
