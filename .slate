@@ -5,7 +5,7 @@
 # Tools
 alias browser     'Safari'
 alias dev-browser 'Google Chrome'
-alias editor      'Sublime Text 2'
+alias editor      'Sublime Text'
 alias terminal    'iTerm'
 
 # Config
@@ -58,7 +58,8 @@ bind up:alt;ctrl;cmd     push up    bar-resize:screenSizeY/3
 bind down:alt;ctrl;cmd   push down  bar-resize:screenSizeY/3
 
 # Window Hints
-bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
+# Enable to get a quick window selector
+# bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
 
 # Focus default browser
 bind b:cmd;alt focus ${browser}
