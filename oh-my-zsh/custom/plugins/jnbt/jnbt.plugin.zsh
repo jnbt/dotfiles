@@ -8,11 +8,14 @@ compdef _c c
 # autocorrect is more annoying than helpful
 unsetopt correct_all
 
+# Configure
+export DEFAULT_USER="jt"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='subl'
+  export EDITOR="subl -n -w"
 fi
 
 mygit() {
