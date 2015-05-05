@@ -17,7 +17,7 @@ config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 config layoutFocusOnActivate true
 
-# 
+#
 # Abstract positions
 alias full        move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf    move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
@@ -58,7 +58,7 @@ bind up:alt;ctrl;cmd     push up    bar-resize:screenSizeY/3
 bind down:alt;ctrl;cmd   push down  bar-resize:screenSizeY/3
 
 # Window Hints
-bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
+# bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
 
 # Focus default browser
 bind b:cmd;alt focus ${browser}
