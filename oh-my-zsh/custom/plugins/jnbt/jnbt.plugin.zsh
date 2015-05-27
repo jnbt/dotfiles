@@ -9,13 +9,13 @@ compdef _c c
 unsetopt correct_all
 
 # Configure
-export DEFAULT_USER="jt"
+export DEFAULT_USER='jt'
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR="subl -n -w"
+  export EDITOR='editor'
 fi
 
 # ssh wrapper that rename current tmux window to the hostname of the
