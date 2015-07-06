@@ -1,0 +1,7 @@
+file-icons@1.5.8
+linter@1.1.0
+linter-haml@0.4.0
+linter-rubocop@0.2.7
+minimap@4.10.2
+project-manager@1.15.10
+

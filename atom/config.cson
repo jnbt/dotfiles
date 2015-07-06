@@ -1,0 +1,43 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "autocomplete-atom-api"
+      "background-tips"
+      "dev-live-reload"
+      "exception-reporting"
+      "language-clojure"
+      "language-go"
+      "language-java"
+      "language-less"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-python"
+      "language-sql"
+      "language-toml"
+      "metrics"
+      "open-on-github"
+      "release-notes"
+      "styleguide"
+      "timecop"
+      "welcome"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "*.meta"
+    ]
+    projectHome: "~/devel"
+  editor:
+    invisibles: {}
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "linter-rubocop": {}
+  linter: {}
