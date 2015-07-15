@@ -35,6 +35,7 @@
       "*.meta"
     ]
     projectHome: "~/devel"
+    destroyEmptyPanes: false
   editor:
     invisibles: {}
   "one-dark-ui":
