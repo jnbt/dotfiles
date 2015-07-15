@@ -42,3 +42,5 @@
     layoutMode: "Compact"
   "linter-rubocop": {}
   linter: {}
+  "language-babel":
+    suppressTranspileOnSaveMessages: true
