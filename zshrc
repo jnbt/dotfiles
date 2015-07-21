@@ -1,5 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
+
+# Theming
 ZSH_THEME="jnbt-power"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(longstatus rvm)
 
 # No auto update
 DISABLE_AUTO_UPDATE="true"
