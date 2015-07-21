@@ -37,10 +37,6 @@
       "Thumbs.db"
       "*.meta"
     ]
-    themes: [
-      "one-dark-ui"
-      "afterglow-like"
-    ]
     projectHome: "~/devel"
     destroyEmptyPanes: false
   "tree-view":
