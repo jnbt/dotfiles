@@ -30,7 +30,7 @@ save() {
   apm list --installed --bare > "$SCRIPT_FOLDER/package-list.txt"
 }
 
-update() {
+upgrade() {
   apm update
   apm upgrade
   save
@@ -41,8 +41,8 @@ case "$1" in
     save
     exit 1
     ;;
-  (update)
-    update
+  (upgrade)
+    upgrade
     exit 1
     ;;
   (*)
