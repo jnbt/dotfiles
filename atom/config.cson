@@ -70,3 +70,5 @@
       "text.plain"
       "text.plain.null-grammar"
     ]
+  "the-closer":
+    closeWindowTogetherWithLastTab: false

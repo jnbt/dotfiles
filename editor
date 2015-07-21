@@ -4,4 +4,4 @@
 # subl --new-window -wait "$@"%
 
 # Atom
-atom --wait "$@"
+atom --new-window --wait "$@"
