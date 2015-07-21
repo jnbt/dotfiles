@@ -41,3 +41,10 @@ neoserver() {
     ssh $project@$PROJECT_HOST $*
   fi
 }
+
+docsync() {
+  ga .
+  gc
+  gl
+  gp
+}
