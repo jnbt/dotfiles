@@ -72,3 +72,4 @@
     ]
   "the-closer":
     closeWindowTogetherWithLastTab: false
+  "linter-jshint": {}
