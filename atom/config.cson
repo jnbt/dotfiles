@@ -69,6 +69,8 @@
       "text.git-commit"
       "text.plain"
       "text.plain.null-grammar"
+      "source.ruby"
+      "source.js"
     ]
   "the-closer":
     closeWindowTogetherWithLastTab: false
