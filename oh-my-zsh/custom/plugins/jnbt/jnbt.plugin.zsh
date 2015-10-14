@@ -49,3 +49,7 @@ jnbtgit() {
   echo -n "E-Mail: "
   git config user.email
 }
+
+startdocker() {
+  bash '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+}
