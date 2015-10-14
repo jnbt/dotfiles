@@ -51,5 +51,6 @@ jnbtgit() {
 }
 
 startdocker() {
-  bash '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+  docker-machine start default
+  eval "$(docker-machine env default)"
 }
