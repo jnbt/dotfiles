@@ -45,6 +45,33 @@
 # do not want to install a special font, you can set `POWERLEVEL9K_MODE` to
 # `compatible`. This shows all icons in regular symbols.
 case $POWERLEVEL9K_MODE in
+  'nerd')
+  # nerd-fonts Font required!
+  # See https://github.com/ryanoasis/nerd-fonts
+  LEFT_SEGMENT_SEPARATOR="\uE0B0"
+  RIGHT_SEGMENT_SEPARATOR="\uE0B2"
+  ROOT_ICON="\uF0E7"
+  RUBY_ICON="\uE791"
+  AWS_ICON="AWS:"
+  BACKGROUND_JOBS_ICON="\u2699" # ⚙
+  TEST_ICON=''
+  OK_ICON="\uF00C"
+  FAIL_ICON="\uF00D"
+  SYMFONY_ICON="SF"
+  VCS_UNTRACKED_ICON='?'
+  VCS_UNSTAGED_ICON="\u25CF" # ●
+  VCS_STAGED_ICON="\u271A"   # ✚
+  VCS_STASH_ICON="\u235F"    # ⍟
+  VCS_INCOMING_CHANGES="\uF175"
+  VCS_OUTGOING_CHANGES="\uF176"
+  VCS_TAG_ICON=''
+  VCS_BOOKMARK_ICON="\u263F" # ☿
+  VCS_COMMIT_ICON=''
+  VCS_BRANCH_ICON="\uE0A0 "
+  VCS_REMOTE_BRANCH_ICON="\u2192"
+  VCS_GIT_ICON=''
+  VCS_HG_ICON=''
+  ;;
   'flat')
     # Awesome-Patched Font required!
     # See https://github.com/gabrielelana/awesome-terminal-fonts/tree/patching-strategy/patched
