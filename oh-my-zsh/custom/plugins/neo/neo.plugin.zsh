@@ -30,6 +30,8 @@ PROJECT_HOST_FILE=~/.doener
 neoserver() {
   if [[ -n $1 ]]; then
     project=$1
+  elif [[ ${PWD} =~ '.+/devel/([^/]+)' ]]; then
+    project=$match[1]
   else
     project=${${PWD##*/}%%-*}
   fi
