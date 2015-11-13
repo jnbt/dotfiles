@@ -26,6 +26,7 @@ neocloneold() {
 
 PROJECT_HOST=doener
 PROJECT_HOST_FILE=~/.doener
+export PATH="$PATH:$HOME/devel/duty/bin"
 
 neoserver() {
   if [[ -n $1 ]]; then
