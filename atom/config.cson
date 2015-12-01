@@ -27,6 +27,8 @@
       "vim-mode"
       "deprecation-cop"
       "package-generator"
+      "linter-jshint"
+      "linter-rubocop"
     ]
     ignoredNames: [
       ".git"
@@ -45,7 +47,7 @@
     showInvisibles: true
     invisibles: {}
     fontFamily: "Monaco"
-    fontSize: 18
+    fontSize: 17
   "one-dark-ui":
     layoutMode: "Compact"
   "linter-rubocop": {}
