@@ -53,4 +53,6 @@ jnbtgit() {
 startdocker() {
   docker-machine start default
   eval "$(docker-machine env default)"
+  export DOCKER_DEV_UID=1000
+  export DOCKER_DEV_GID=50
 }
