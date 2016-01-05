@@ -20,3 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration, device specific config should live in .zshrc.local
 # export A=B
+
+# Load travis
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
