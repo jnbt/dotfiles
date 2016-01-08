@@ -1,11 +1,13 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Theming
-ZSH_THEME="jnbt-power"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(longstatus rvm)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_MODE="nerd"
+if [ x"$TERM_PROGRAM" = x"iTerm.app" ]; then
+  ZSH_THEME="jnbt-power"
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rvm)
+  POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+  POWERLEVEL9K_MODE="awesome-patched-jnbt"
+fi
 
 # No auto update
 DISABLE_AUTO_UPDATE="true"
