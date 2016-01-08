@@ -15,7 +15,7 @@ DISABLE_AUTO_UPDATE="true"
 # Dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(ruby osx autojump rvm neo jnbt neogit local mix travis)
+plugins=(ruby osx autojump rvm neo jnbt neogit local mix travis tmuxinator)
 
 export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
 source $ZSH/oh-my-zsh.sh
