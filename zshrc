@@ -15,10 +15,23 @@ DISABLE_AUTO_UPDATE="true"
 # Dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(ruby osx autojump rvm neo jnbt neogit local mix travis tmuxinator)
+plugins=(
+  autojump
+  jnbt
+  jsontools
+  local
+  mix
+  neo
+  neogit
+  osx
+  ruby
+  rvm
+  tmux
+  tmuxinator
+  travis
+)
 
 export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
 source $ZSH/oh-my-zsh.sh
 
-# User configuration, device specific config should live in .zshrc.local
-# export A=B
+# Device specific config should live in .local.zsh
