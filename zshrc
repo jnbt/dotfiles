@@ -35,3 +35,5 @@ export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
 source $ZSH/oh-my-zsh.sh
 
 # Device specific config should live in .local.zsh
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
