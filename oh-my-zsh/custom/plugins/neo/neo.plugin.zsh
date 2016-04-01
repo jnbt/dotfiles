@@ -28,6 +28,15 @@ PROJECT_HOST=doener
 PROJECT_HOST_FILE=~/.doener
 export PATH="$PATH:$HOME/devel/duty/bin"
 
+read -r -d '' NEOSERVER_AUTO_SCREEN << EOM
+sleep 1
+screen -x && clear && exit 0
+if [ "$?" != "0" ]; then
+  screen && clear && exit 0
+fi
+echo "Screen failed! continuing with normal bash startup"
+EOM
+
 neoserver() {
   if [[ -n $1 ]]; then
     project=$1
@@ -38,10 +47,10 @@ neoserver() {
   fi
 
   if [[ -f $PROJECT_HOST_FILE ]]; then
-    sshpass -f $PROJECT_HOST_FILE ssh $project@$PROJECT_HOST
+    sshpass -f $PROJECT_HOST_FILE ssh $project@$PROJECT_HOST -t "$NEOSERVER_AUTO_SCREEN"
   else
     echo "(use sshpass via file: $PROJECT_HOST_FILE)"
-    ssh $project@$PROJECT_HOST $*
+    ssh $project@$PROJECT_HOST -t "$NEOSERVER_AUTO_SCREEN" $*
   fi
 }
 
