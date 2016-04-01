@@ -1,7 +1,6 @@
 "*":
-  welcome:
-    showOnStartup: false
   core:
+    destroyEmptyPanes: false
     disabledPackages: [
       "autocomplete-atom-api"
       "background-tips"
@@ -40,24 +39,16 @@
       "*.meta"
     ]
     projectHome: "~/devel"
-    destroyEmptyPanes: false
-  "tree-view":
-    hideIgnoredNames: true
   editor:
-    showInvisibles: true
-    invisibles: {}
     fontFamily: "Monaco"
-    fontSize: 17
-  "one-dark-ui":
-    layoutMode: "Compact"
-  "linter-rubocop": {}
-  linter: {}
+    fontSize: 15
+    invisibles: {}
+    showInvisibles: true
   "language-babel":
     suppressTranspileOnSaveMessages: true
-  minimap:
-    absoluteMode: true
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
+  linter: {}
+  "linter-jshint": {}
+  "linter-rubocop": {}
   "markdown-preview":
     grammars: [
       "source.gfm"
@@ -65,6 +56,10 @@
       "text.plain"
       "text.plain.null-grammar"
     ]
+  minimap:
+    absoluteMode: true
+  "one-dark-ui":
+    layoutMode: "Compact"
   "spell-check":
     grammars: [
       "source.gfm"
@@ -76,4 +71,9 @@
     ]
   "the-closer":
     closeWindowTogetherWithLastTab: false
-  "linter-jshint": {}
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
