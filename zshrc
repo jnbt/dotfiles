@@ -2,11 +2,13 @@ ZSH=$HOME/.oh-my-zsh
 
 # Theming
 if [ x"$TERM_PROGRAM" = x"iTerm.app" ]; then
-  ZSH_THEME="jnbt-power"
+  ZSH_THEME="powerlevel9k/powerlevel9k"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
   POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rvm)
   POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-  POWERLEVEL9K_MODE="awesome-patched-jnbt"
+  POWERLEVEL9K_MODE="awesome-patched"
+  POWERLEVEL9K_VCS_GIT_ICON=''
+  POWERLEVEL9K_VCS_VCS_HG_ICON=''
 fi
 
 # No auto update
