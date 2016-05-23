@@ -35,7 +35,8 @@ screen -x && clear && exit 0
 if [ "$?" != "0" ]; then
   screen && clear && exit 0
 fi
-echo "Screen failed! continuing with normal bash startup"
+echo "Screen failed! Continuing with normal shell startup"
+/bin/bash -l
 EOM
 
 neoserver() {
