@@ -31,6 +31,7 @@ plugins=(
   tmux
   tmuxinator
   travis
+  nvm
 )
 
 export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
@@ -39,8 +40,5 @@ source $ZSH/oh-my-zsh.sh
 # Device specific config should live in .local.zsh
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
