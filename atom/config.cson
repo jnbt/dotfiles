@@ -1,5 +1,17 @@
 "*":
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     destroyEmptyPanes: false
     disabledPackages: [
       "autocomplete-atom-api"
@@ -26,9 +38,14 @@
       "vim-mode"
       "deprecation-cop"
       "package-generator"
-      "linter-jshint"
       "linter-rubocop"
+      "activate-power-mode"
+      "ide-flow"
+      "nuclide"
+      "linter-haml"
+      "linter-jshint"
     ]
+    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
       ".hg"
@@ -41,9 +58,10 @@
     projectHome: "~/devel"
   editor:
     fontFamily: "Monaco"
-    fontSize: 15
     invisibles: {}
     showInvisibles: true
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   "language-babel":
     suppressTranspileOnSaveMessages: true
   linter: {}
@@ -58,8 +76,7 @@
     ]
   minimap:
     absoluteMode: true
-  "one-dark-ui":
-    layoutMode: "Compact"
+  "one-dark-ui": {}
   "spell-check":
     grammars: [
       "source.gfm"
@@ -73,6 +90,7 @@
     closeWindowTogetherWithLastTab: false
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
