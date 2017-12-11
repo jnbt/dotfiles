@@ -27,7 +27,9 @@ neocloneold() {
 
 PROJECT_HOST=doener
 PROJECT_HOST_FILE=~/.doener
-export PATH="$PATH:$HOME/devel/duty/bin"
+
+NIT_PATH=$HOME/devel/nit/bin
+test -e $NIT_PATH && export PATH="$PATH:$NIT_PATH" && source $NIT_PATH/nit.completion
 
 read -r -d '' NEOSERVER_AUTO_SCREEN << EOM
 sleep 1
