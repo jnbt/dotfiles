@@ -4,4 +4,7 @@
 # subl --new-window -wait "$@"%
 
 # Atom
-atom --new-window --wait "$@"
+# atom --new-window --wait "$@"
+
+# Visual Studio Code
+code --new-window --wait "$@"
