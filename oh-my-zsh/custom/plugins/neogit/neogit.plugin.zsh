@@ -36,3 +36,12 @@ alias grhh='git reset HEAD --hard'
 alias gsr='git svn rebase'
 alias gst='git status -s'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+
+git-by-size() {
+  if [[ -n $1 ]]; then
+    git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -$1 | awk '{print$1}')"
+  else
+    echo "USAGE: git-by-size AMOUNT"
+    echo "Lists the AMOUNT largest files in the current repo"
+  fi
+}
