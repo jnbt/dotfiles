@@ -1,5 +1,5 @@
 # Exports
-export SF_DIR="$HOME/devel/smartfox"
+# export SF_DIR="$HOME/devel/smartfox"
 
 # Aliases
 alias md5sum='md5 -r'
