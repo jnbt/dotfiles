@@ -18,19 +18,15 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
+  asdf
   autojump
   jnbt
-  jsontools
   local
-  mix
   neo
   neogit
   osx
-  ruby
-  rvm
   tmux
   tmuxinator
-  travis
   nvm
 )
 
@@ -43,4 +39,3 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
-
