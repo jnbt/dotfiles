@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 if [ x"$TERM_PROGRAM" = x"iTerm.app" -o x"$TERM_PROGRAM" = x"Hyper" ]; then
   # Install a powerline font: https://github.com/powerline/fonts
   ZSH_THEME="powerlevel9k/powerlevel9k"
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable)
   POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
   POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
   POWERLEVEL9K_VCS_GIT_ICON=''
