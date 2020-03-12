@@ -11,6 +11,26 @@ gpu() {
   git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }
 
+ggone() {
+  echo "Execute: git remote prune origin"
+  git remote prune origin
+  branches=$(git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}')
+  echo
+  echo "The following local branched will be FORCE-removed:"
+  while IFS= read -r branch; do
+    echo "* $branch"
+  done <<< "$branches"
+  echo
+  read -q "REPLY?Are you sure? (y/N)"
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    echo $(echo $branches | xargs git branch -D)
+  else
+    echo "Cancelled"
+  fi
+}
+
 alias ga='git add'
 alias gb='git branch -v'
 alias gba='gb -a'
