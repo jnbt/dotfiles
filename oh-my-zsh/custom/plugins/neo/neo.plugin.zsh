@@ -1,6 +1,3 @@
-# Exports
-# export SF_DIR="$HOME/devel/smartfox"
-
 # Aliases
 alias md5sum='md5 -r'
 alias libreoffice='/Applications/LibreOffice.app/Contents/MacOS/soffice'
@@ -20,9 +17,6 @@ neoclone() {
 
 PROJECT_HOST=doener
 PROJECT_HOST_FILE=~/.doener
-
-NIT_PATH=$HOME/devel/nit/bin
-test -e $NIT_PATH && export PATH="$PATH:$NIT_PATH" && source $NIT_PATH/nit.completion
 
 read -r -d '' NEOSERVER_AUTO_SCREEN << EOM
 sleep 1
