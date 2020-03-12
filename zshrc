@@ -30,6 +30,7 @@ plugins=(
   tmuxinator
   nvm
   rvm
+  rake-fast
 )
 
 export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
