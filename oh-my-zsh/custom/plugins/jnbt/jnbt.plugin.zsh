@@ -56,3 +56,14 @@ startdocker() {
   export DOCKER_DEV_UID=1000
   export DOCKER_DEV_GID=50
 }
+
+server() {
+  if [[ -n $1 ]] ; then
+    port="$1"
+  else
+    port="8000"
+  fi
+
+  echo "http://localhost:${port}"
+  python3 -m http.server ${port}
+}
