@@ -29,13 +29,15 @@ alias glgp='git log --stat --color -p'
 alias glr='git pull -v --rebase'
 alias gm='git merge'
 alias gp='git push -v'
-alias gpfl='git push -v --force-with-lease'
+alias gpf='git push -v --force-with-lease'
 alias gr='git grep'
 alias grep='grep --colour=auto'
 alias grhh='git reset HEAD --hard'
 alias gsr='git svn rebase'
 alias gst='git status -s'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gps='git push -v -o ci.skip'
+alias gpfs='git push -v -o ci.skip --force-with-lease'
 
 git-by-size() {
   if [[ -n $1 ]]; then
