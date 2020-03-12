@@ -18,13 +18,6 @@ neoclone() {
   cd $1;
 }
 
-neocloneold() {
-  cd ~/devel;
-  git clone git@office.neopoly.de:$1;
-  cd $1;
-  gco develop;
-}
-
 PROJECT_HOST=doener
 PROJECT_HOST_FILE=~/.doener
 
