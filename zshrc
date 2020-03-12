@@ -24,10 +24,12 @@ plugins=(
   local
   neo
   neogit
+  neorvm
   osx
   tmux
   tmuxinator
   nvm
+  rvm
 )
 
 export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"

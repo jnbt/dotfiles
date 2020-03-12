@@ -3,7 +3,7 @@ then
   export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
   alias gemdir='cd `rvm gemdir`'
-  
+
   # change directory into gem dir
   chgem() {
     cd "`rvm gemdir`/gems/$1"
