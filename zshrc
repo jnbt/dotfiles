@@ -33,6 +33,8 @@ plugins=(
   rake-fast
 )
 
+export ASDF_DIR=$(brew --prefix asdf)
+
 export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
 source $ZSH/oh-my-zsh.sh
 
