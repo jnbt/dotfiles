@@ -15,8 +15,8 @@ neoclone() {
   cd $1;
 }
 
-PROJECT_HOST=doener
-PROJECT_HOST_FILE=~/.doener
+PROJECT_HOST=hummus
+PROJECT_HOST_FILE=~/.hummus
 
 read -r -d '' NEOSERVER_AUTO_SCREEN << EOM
 sleep 1
