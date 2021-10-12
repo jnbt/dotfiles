@@ -20,6 +20,9 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   asdf
   autojump
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC="true"
   jnbt
   local
   neo
