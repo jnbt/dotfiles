@@ -6,10 +6,6 @@ neo()  { cd ~/devel/$1; }
 _neo() { _files -W ~/devel -/; }
 compdef _neo neo
 
-resin()  { "${EDITOR:-vi}" ~/devel/resin/conf/$1; }
-_resin() { _files -W ~/devel/resin/conf/ -/; }
-compdef _resin resin
-
 neoclone() {
   git clone gitlab@gitlab.neopoly.de:$1;
   cd $1;

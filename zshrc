@@ -1,44 +1,70 @@
-ZSH=$HOME/.oh-my-zsh
+#
+# Environment
+#
+export ASDF_DIR=$(brew --prefix asdf)
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl@1.1/lib/
+export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
 
+#
+# Colorize in ls
+#
+# export LSCOLORS="EHfxcxdxBxegecabagacad"
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
-# No auto update
-DISABLE_AUTO_UPDATE="true"
-
-# Dots while waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
-plugins=(
-  asdf
-  autojump
+#
+# Autosuggest
+#
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC="true"
+
+#
+# Shell completion
+#
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored _correct _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' matcher-list '' 'l:|=* r:|=*' 'l:|=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+zstyle :compinstall filename '/Users/jt/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Enable bash compability for ZSH completion
+autoload bashcompinit && bashcompinit
+
+#
+# Own features
+#
+features=(
   jnbt
   local
   neo
   neogit
   neorvm
-  osx
-  tmux
-  tmuxinator
-  nvm
-  rvm
-  rake-fast
 )
 
-export ASDF_DIR=$(brew --prefix asdf)
+for feature in $features; do
+  source "$HOME/personal/dotfiles/zsh-plugins/$feature.plugin.zsh"
+done
 
-export ZSH_CUSTOM="$HOME/personal/dotfiles/oh-my-zsh/custom"
-source $ZSH/oh-my-zsh.sh
-
-# Device specific config should live in .local.zsh
-
+#
+# iTerm 2 integrations
+#
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-iterm2_print_user_vars() {
-  iterm2_set_user_var rvmCurrent $(rvm current)
-}
+
+
+#
+# Starship prompt
+#
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
 
-export ANDROID_HOME=~/Library/Android/sdk
-export ANDROID_SDK_ROOT=~/Library/Android/sdk
+# Device specific config should live in .local.zsh

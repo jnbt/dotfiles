@@ -1,10 +1,6 @@
 vhosts(){ "${EDITOR:-vi}" /usr/local/etc/nginx; }
 hosts(){ "${EDITOR:-vi}" /etc/hosts; }
 
-c(){ cd ~/Inwork/$1; }
-_c(){ _files -W ~/Inwork -/; }
-compdef _c c
-
 # autocorrect is more annoying than helpful
 unsetopt correct_all
 
@@ -67,3 +63,7 @@ server() {
   echo "http://localhost:${port}"
   python3 -m http.server ${port}
 }
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
