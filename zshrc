@@ -1,15 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
 
-# Theming
-if [ x"$TERM_PROGRAM" = x"iTerm.app" -o x"$TERM_PROGRAM" = x"Hyper" ]; then
-  # Install a powerline font: https://github.com/powerline/fonts
-  ZSH_THEME="powerlevel9k/powerlevel9k"
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable)
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-  POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-  POWERLEVEL9K_VCS_GIT_ICON=''
-  POWERLEVEL9K_VCS_VCS_HG_ICON=''
-fi
 
 # No auto update
 DISABLE_AUTO_UPDATE="true"
@@ -47,6 +37,8 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 iterm2_print_user_vars() {
   iterm2_set_user_var rvmCurrent $(rvm current)
 }
+export STARSHIP_CONFIG=~/.starship
+eval "$(starship init zsh)"
 
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
