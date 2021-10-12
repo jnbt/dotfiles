@@ -67,4 +67,9 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
 
+#
+# Syntax Highlighting
+#
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Device specific config should live in .local.zsh
