@@ -1,11 +1,16 @@
 #
 # Environment
 #
-export ASDF_DIR=$(brew --prefix asdf)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl@1.1/lib/
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
+
+#
+# ASDF
+#
+export ASDF_DIR=$(brew --prefix asdf)
+source $ASDF_DIR/libexec/asdf.sh
 
 #
 # Colorize in ls
