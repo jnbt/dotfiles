@@ -67,3 +67,14 @@ server() {
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+# terminal title
+
+function rename_tab_to_pwd(){
+  # use precmd to name the tab:
+  # e.g., /Users/stephen/projects/dotfiles -> ~/p/dotfiles
+  window_title="\e]0;${PWD/#"$HOME"/~}\a"
+  echo -ne "$window_title"
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd rename_tab_to_pwd
