@@ -1,0 +1,42 @@
+[core]
+  editor = code --wait
+  excludesfile = ~/personal/dotfiles/gitexcludes
+
+[init]
+	defaultBranch = main
+
+[alias]
+  mwps = push -o merge_request.create -o merge_request.target=main -o merge_request.merge_when_pipeline_succeeds
+  lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %C(bold)%s %Creset%C(white)%an%Creset %C(green)%cr' --abbrev-commit --date=relative
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  grep = auto
+
+[user]
+  name = Jonas Thiel
+  email = jt@neopoly.de
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+
+[rebase]
+  autosquash = true
+  autostash = true
+
+[advice]
+  detachedHead = false
+
+[branch]
+  autosetuprebase = always
+  sort = -committerdate
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
