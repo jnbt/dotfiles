@@ -69,6 +69,7 @@ features=(
   neo
   neogit
   neorvm
+  waiting
 )
 
 for feature in $features; do
