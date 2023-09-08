@@ -1,6 +1,7 @@
 # Aliases
 alias md5sum='md5 -r'
 alias libreoffice='/Applications/LibreOffice.app/Contents/MacOS/soffice'
+alias be='bundle exec'
 
 neo()  { cd ~/devel/$1; }
 _neo() { _files -W ~/devel -/; }
