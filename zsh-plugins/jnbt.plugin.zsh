@@ -68,6 +68,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias weather='curl https://wttr.in/Bochum'
+
 # terminal title
 
 function rename_tab_to_pwd(){
