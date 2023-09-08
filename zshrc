@@ -69,6 +69,7 @@ features=(
   neo
   neogit
   neorvm
+  rake
   waiting
 )
 
