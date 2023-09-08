@@ -9,8 +9,7 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 #
 # ASDF
 #
-export ASDF_DIR=$(brew --prefix asdf)
-source $ASDF_DIR/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 #
 # Colorize in ls
