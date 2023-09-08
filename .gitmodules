@@ -10,6 +10,3 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git@github.com:ervandew/supertab.git
-[submodule "oh-my-zsh/custom/themes/powerlevel9k"]
-	path = oh-my-zsh/custom/themes/powerlevel9k
-	url = git@github.com:bhilburn/powerlevel9k.git
